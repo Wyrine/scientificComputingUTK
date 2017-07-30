@@ -26,6 +26,7 @@ from conjGrad import *
 
 def Ax(v):
     Ax = zeros((9))*1.0
+    # fill in the 9 rows of Ax
     #Defining matrix multiplication of Ax with V based off of the matrix in problem statement
     Ax[0] = -4.0 * v[0] + 1.0 * (v[1] + v[3])
     Ax[1] = -4.0 * v[1] + 1.0 * (v[0] + v[2] + v[4])
@@ -36,7 +37,6 @@ def Ax(v):
     Ax[6] = -4.0 * v[6] + 1.0 * (v[3] + v[7])
     Ax[7] = -4.0 * v[7] + 1.0 * (v[4] + v[6]  + v[8])
     Ax[8] = -4.0 * v[8] + 1.0 * (v[5] + v[7])
-    # fill in the 9 rows of Ax
     return Ax
 
 b = array([0,0,100,0,0,100,200,200,300])*(-1.0)

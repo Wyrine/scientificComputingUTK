@@ -3,7 +3,7 @@
     Conjugate gradient method for solving [A]{x} = {b}.
     The matrix [A] should be sparse. User must supply
     the function Av(v) that returns the vector [A]{v}.
-'''    
+'''
 from numpy import dot
 from math import sqrt
 
@@ -22,6 +22,3 @@ def conjGrad(Av,x,b,tol=1.0e-9):
             beta = -dot(r,u)/dot(s,u)
             s = r + beta*s
     return x,i
-
-
-    
